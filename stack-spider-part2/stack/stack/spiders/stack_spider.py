@@ -3,7 +3,6 @@ from scrapy.selector import Selector
 
 from stack.items import StackItem
 
-
 class StackSpider(Spider):
     name = "stack"
     allowed_domains = ["stackoverflow.com"]
