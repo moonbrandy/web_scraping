@@ -88,7 +88,7 @@ def scrap_trademe_car(car_info_list, output_file_path, save_urls_path):
     with open(save_urls_path, "w", newline='') as urls_output_file:
         wr = csv.writer(urls_output_file, delimiter=',')
         for url in urls:
-            wr.writerow([urls])
+            wr.writerow(url)
 
     print("we have %s URLs ready for scrap" % len(urls))
     
