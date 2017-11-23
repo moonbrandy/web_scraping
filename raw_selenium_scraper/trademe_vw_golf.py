@@ -88,7 +88,7 @@ def scrap_trademe_car(car_info_list, output_file_path, save_urls_path):
     with open(save_urls_path, "w", newline='') as urls_output_file:
         wr = csv.writer(urls_output_file, delimiter=',')
         for url in urls:
-            wr.writerow(url)
+            wr.writerow([url])
 
     print("we have %s URLs ready for scrap" % len(urls))
     
@@ -353,10 +353,10 @@ def get_attribute(driver, KEY):
 
 GOLF = {'car_type': 4, 'car_make': 75, 'car_model': 12}
 
-OUTPUT_PATH = "output_%s.csv" % time.strftime("%Y_%m_%d_%H")
-URLS_OUTPUT_PATH = "urls_%s.csv" % time.strftime("%Y_%m_%d_%H")
+OUTPUT_PATH = "E:\\web_scraping\\raw_selenium_scraper\\output_%s.csv" % time.strftime("%Y_%m_%d_%H")
+URLS_OUTPUT_PATH = "E:\\web_scraping\\raw_selenium_scraper\\urls_%s.csv" % time.strftime("%Y_%m_%d_%H")
 # TEST_PATH = "test_%s.csv" % time.strftime("%Y_%m_%d_%H")
-FAST_PATH = "fast_%s.csv" % time.strftime("%Y_%m_%d_%H")
+FAST_PATH = "E:\\web_scraping\\raw_selenium_scraper\\fast_%s.csv" % time.strftime("%Y_%m_%d_%H")
 
 scrap_trademe_car(GOLF, FAST_PATH, URLS_OUTPUT_PATH)
 
